@@ -1,0 +1,52 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "gamer",
+            "otherEntityName": "gamer",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pronotype",
+            "otherEntityName": "pronotype",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pronostatus",
+            "otherEntityName": "pronostatus",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "pronoDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "matchOrGroupOrcompetId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "scoreHome",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "scoreAway",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "winner",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180424175746",
+    "entityTableName": "pronostic",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}

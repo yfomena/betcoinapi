@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "gameHome",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "team1"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "gameAway",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "team2"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "groupe",
+            "otherEntityName": "groupe",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "teamName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "colorHome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "colorAway",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180424175741",
+    "entityTableName": "team",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}

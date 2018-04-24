@@ -1,0 +1,78 @@
+entity Gamer {
+	pseudo String,
+    email String,
+    points Integer,
+    lastConnexion Instant,
+    winningRun Integer,
+    isAdmin Boolean
+}
+
+entity Team {
+	teamName String,
+    colorHome String,
+    colorAway String
+}
+
+entity Game {
+	matchDate Instant,
+	scoreHome Integer,
+    scoreAway Integer
+}
+
+entity Groupe {
+	groupName String
+}
+
+entity Competition {
+	competitionName String
+}
+
+
+entity Pronotype {
+	pronotypeName String,
+    expirationDate Instant,
+	points Integer
+}
+
+entity Pronostic {
+	pronoDate Instant,
+	matchOrGroupOrcompetId Long,
+	scoreHome Integer,
+    scoreAway Integer,
+    winner Long
+}
+
+
+entity Phase {
+    phaseName String
+}
+
+entity Pronostatus {
+    pronostatusName String
+}
+
+relationship OneToOne {
+    Groupe{winner} to Team,
+    Groupe{second} to Team,
+    Competition{winner} to Team,
+    Competition{second} to Team,
+    Competition{third} to Team
+}
+
+relationship OneToMany {
+	Gamer{pronostics} to Pronostic{gamer},
+    Groupe{teams} to Team{groupe},
+    Team{gameHome} to Game{team1},
+    Team{gameAway} to Game{team2},
+    Pronotype to Pronostic{pronotype},
+    Phase to Game{phase},
+    Pronostatus to Pronostic{pronostatus}
+}
+
+paginate all with pagination
+service all with serviceImpl
+
+/*
+phases::FIRST, EIGHTH, QUARTER, SEMI, THIRD, FINAL
+betstatus::WON, LOST, PENDING
+*/

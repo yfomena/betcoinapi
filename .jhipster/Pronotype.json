@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "pronostic",
+            "otherEntityName": "pronostic",
+            "otherEntityRelationshipName": "pronotype"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "pronotypeName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expirationDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "points",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180424175745",
+    "entityTableName": "pronotype",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}

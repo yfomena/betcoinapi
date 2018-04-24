@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "pronostics",
+            "otherEntityName": "pronostic",
+            "otherEntityRelationshipName": "gamer"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "pseudo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "points",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lastConnexion",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "winningRun",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "isAdmin",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180424175740",
+    "entityTableName": "gamer",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}

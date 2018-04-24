@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "game",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "phase"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "phaseName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180424175747",
+    "entityTableName": "phase",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}

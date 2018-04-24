@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "winner",
+            "otherEntityName": "team",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "groupe"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "second",
+            "otherEntityName": "team",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "groupe"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "teams",
+            "otherEntityName": "team",
+            "otherEntityRelationshipName": "groupe"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "groupName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180424175743",
+    "entityTableName": "groupe",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}

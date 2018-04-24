@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "pronostic",
+            "otherEntityName": "pronostic",
+            "otherEntityRelationshipName": "pronostatus"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "pronostatusName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180424175748",
+    "entityTableName": "pronostatus",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}

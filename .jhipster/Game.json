@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "team1",
+            "otherEntityName": "team",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "team2",
+            "otherEntityName": "team",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "phase",
+            "otherEntityName": "phase",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "matchDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "scoreHome",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "scoreAway",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180424175742",
+    "entityTableName": "game",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "betcoinapi"
+}
